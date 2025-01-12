@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #F19CBB, #FFC8A8, #F19CBB, #FFC0CB, #EB5284);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: 300% 300%;
+    animation: rotateBackground 10s linear infinite;
+}
+
+.calculator {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#result {
+    width: 100%;
+    padding: 15px;
+    font-size: 30px;
+    text-align: right;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #eb5284;
+    color: white;
+}
+
+.btn:active {
+    background-color: #ffcccb;
+}
+
+@keyframes rotateBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
